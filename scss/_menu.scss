@@ -1,0 +1,82 @@
+@use "fonts";
+@use "devices";
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#menu {
+  background-color: #000000;
+  color: #00ff00;
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+
+  ul {
+    position: absolute;
+
+    font: {
+      size: clamp(0.8rem, 3vw, 1.5rem);
+    }
+
+    right: 10px;
+    top: 30px;
+
+    a {
+      font-family: "IBM-3270";
+      text-decoration: none;
+      margin: 0 10px;
+      color: #00ff00;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #000000;
+        animation: glow 0.5s;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        border-radius: 3px;
+      }
+
+      &:active {
+        color: #ffffff;
+      }
+    }
+
+    @include devices.device("mobile") {
+      #menu {
+        i {
+          display: none;
+        }
+          
+      }
+
+    }
+  }
+
+  .logo {
+    display: inline;
+    font-family: "Libre-barcode", sans-serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin: 20px 20px 10px 10px;
+
+    h1 {
+      margin: 0 20px 0 10px;
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    color: #00ff00;
+  }
+
+  50% {
+    color: #ffffff;
+  }
+
+  100% {
+    color: #00ff00;
+  }
+}

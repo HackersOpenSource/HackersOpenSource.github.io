@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Libre-barcode";
+  src: url("/fonts/LibreBarcode_v1.008/LibreBarcode39ExtendedText-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/helvetica/Helvetica 400.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM-3270";
+  src: url("/fonts/ibm/3270-Medium 500.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Laster";
+  src: url("/fonts/lasters/Lasters 400.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lazytuesday";
+  src: url("/fonts/lazytuesday/Lazy Tuesday - Personal Use 400.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nova";
+  src: url("/fonts/nova/NovaMono 400.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Static";
+  src: url("/fonts/static/Static Regular 400.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#menu {
+  background-color: #000000;
+  color: #00ff00;
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+}
+#menu ul {
+  position: absolute;
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  right: 10px;
+  top: 30px;
+}
+#menu ul a {
+  font-family: "IBM-3270";
+  text-decoration: none;
+  margin: 0 10px;
+  color: #00ff00;
+}
+#menu ul a:hover {
+  color: #ffffff;
+  background-color: #000000;
+  animation: glow 0.5s;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  border-radius: 3px;
+}
+#menu ul a:active {
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  #menu ul {
+    visibility: hidden;
+  }
+}
+#menu .logo {
+  display: inline;
+  font-family: "Libre-barcode", sans-serif;
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin: 20px 20px 10px 10px;
+}
+#menu .logo h1 {
+  margin: 0 20px 0 10px;
+}
+
+@keyframes glow {
+  0% {
+    color: #00ff00;
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: #00ff00;
+  }
+}
+#body {
+  display: flexbox;
+  position: relative;
+  top: 30vh;
+  left: 30vw;
+  height: 100vh;
+  width: 100vw;
+  font-family: "IBM-3270";
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+/*# sourceMappingURL=style.css.map */
